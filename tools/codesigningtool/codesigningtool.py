@@ -23,6 +23,11 @@ import subprocess
 import sys
 from typing import Optional, Union
 
+import os as _os
+import sys as _sys
+_repo_root = _os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+if _repo_root not in _sys.path:
+    _sys.path.insert(0, _repo_root)
 from tools.wrapper_common import execute
 
 
